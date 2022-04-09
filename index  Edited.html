@@ -30,69 +30,14 @@
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
                 </div>
-                <div class="col col-md-4 col-xl-2 mt-4" data-toggle="modal" data-target="#reserveModal">
-                    <a role="button" class="btn btn-lg btn-info"                        
-                       >Reserve Campsite</a>
+                <div class="col col-md-4 col-xl-2 mt-4">
+                    <a href="#reserveForm" role="button" class="btn btn-lg btn-info" data-toggle="tooltip" 
+                       data-placement="bottom" data-html="true" 
+                       title="Or call us at <br /><strong>1-206-555-1234</strong>">Reserve Campsite</a>
                 </div>
             </div>
         </div>
     </header>
-
-    <div id="reserveModal" class="modal fade"  role="dialog">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header bg-info text-white">
-                    <h3 class="modal-title">Reserve a Campsite</h3>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <form>
-                            <div class="row form-group">
-                                <label class="col-sm-6 col-form-label" for="numCampers">Number of Campers</label>
-                                <div class="col-sm-6">
-                                    <select name="numCamppers" class="form-control" id="numCampers">
-                                        <option>Select...</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-6 col-form-label" for="date">Date</label>
-                                <div class="col-sm-6">
-                                    <input class="col-form-label form-control" type="date" name="date" id="date"
-                                        placeholder="MM/DD/YYYY">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-6 col-form-label">Campsite Type</label>
-                                <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary active bg-success">
-                                      <input type="radio" name="siteType" id="siteTent" autocomplete="off" checked> Tent
-                                    </label>
-                                    <label class="btn btn-secondary bg-primary">
-                                      <input type="radio" name="siteType" id="siteRV" autocomplete="off"> RV
-                                    </label>
-                                </div>
-                             </div>
-                            <div class="row">
-                                <div class="col">
-                                    <button class="btn btn-primary bg-secondary" type="submit" data-dismiss="modal">Cancel</button>    
-                                    <button class="btn btn-primary" type="submit">Search</button>
-                                </div>
-                            </div>
-                        </form>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
@@ -160,31 +105,31 @@
         
         <div class="row row-content">
             <div class="col-md-8 mx-auto">
-                <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+                <div id="homeCarousel" class="carousel slide carousel-fade rounded " data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
                         <li data-target="#homeCarousel" data-slide-to="1"></li>
                         <li data-target="#homeCarousel" data-slide-to="2"></li>
                     </ol>
                     <div class="carousel-inner">
-                        <div class="carousel-item active"> 
-                            <img class="d-block w-100" src="img/breadcrumb-trail.jpg" alt="Breadcrumb Trail Campground"/>
-                            <div class="carousel-caption">
+                        <div class="carousel-item active"  data-interval="2500"> 
+                            <img class="d-block w-100 border rounded" src="img/breadcrumb-trail.jpg" alt="Breadcrumb Trail Campground"  />
+                            <div class="carousel-caption rounded">
                                 <h3>Breadcrumb Trail Campground</h3>
                                 <p class="d-none d-sm-block">Let Nucamp be your guide to this off-the-beaten-path, hike-in-only campground</p>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="img/react-lake.jpg" alt="React Lake Campground" class="rounded-pill"/>     
-                            <div class="carousel-caption">
+                        <div class="carousel-item" data-interval="2500">
+                            <img class="d-block w-100 border rounded" src="img/react-lake.jpg" alt="React Lake Campground" />     
+                            <div class="carousel-caption rounded">
                                 <h3>React Lake Campground</h3>
                                 <p class="d-none d-sm-block">Nestled in the foothils of the Chrome Mountains, this campground on the shores
                                     of the pristine React Lake is a favorite for fly fishers.</p>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="img/chrome-river.jpg" alt="Chrome River Campground" class="rounded-pill"/>
-                            <div class="carousel-caption">
+                        <div class="carousel-item" data-interval="2500">
+                            <img class="d-block w-100 boder rounded" src="img/chrome-river.jpg" alt="Chrome River Campground" />
+                            <div class="carousel-caption rounded">
                                 <h3>Chrome River Campground</h3>
                                 <p class="d-none d-sm-block">Spend a few sunndy days and starry nights beneath a canopy of old-growth
                                     firs at this enchanting spot by the Chrome River. </p>
@@ -253,47 +198,44 @@
                 </div>
             </div>
         </div>
-        
-        <!--  commented out for now
-            <div class="row row-content">
-                <div class="col col-sm-6 mx-auto">
-                    <div class="card">
-                        <h3 class="bg-info text-white">Reserve a Campsite</h3>
-                        <div class="card-body">
-                            <form id="reserveForm">
-                                <div class="row form-group">
-                                    <label class="col-sm-6 col-form-label" for="numCampers">Number of Campers</label>
-                                    <div class="col-sm-6">
-                                        <select name="numCamppers" class="form-control" id="numCampers">
-                                            <option>Select...</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                        </select>
-                                    </div>
+        <div class="row row-content">
+            <div class="col col-sm-6 mx-auto">
+                <div class="card">
+                    <h3 class="bg-info text-white">Reserve a Campsite</h3>
+                    <div class="card-body">
+                        <form id="reservForm">
+                            <div class="row form-group">
+                                <label class="col-sm-6 col-form-label" for="numCampers">Number of Campers</label>
+                                <div class="col-sm-6">
+                                    <select name="numCamppers" class="form-control" id="numCampers">
+                                        <option>Select...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
                                 </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-6 col-form-label" for="date">Date</label>
-                                    <div class="col-sm-6">
-                                        <input class="col-form-label form-control" type="date" name="date" id="date"
-                                            placeholder="MM/DD/YYYY">
-                                    </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label" for="date">Date</label>
+                                <div class="col-sm-6">
+                                    <input class="col-form-label form-control" type="date" name="date" id="date"
+                                        placeholder="MM/DD/YYYY">
                                 </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <button class="btn btn-primary" type="submit">Search</button>
-                                    </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn btn-primary" type="submit">Search</button>
                                 </div>
-                            </form>
+                            </div>
+                        </form>
 
-                        </div>
                     </div>
                 </div>
             </div>
-        -->
+        </div>
 
     </div>
 
